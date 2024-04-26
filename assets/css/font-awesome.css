@@ -1,0 +1,80 @@
+/*!
+ * J'ai personnalisé Font Awesome 4.7.0 pour ce projet spécifique.
+ * Cette personnalisation est basée sur l'original de Font Awesome par Dave Gandy.
+ * Vous pouvez en savoir plus sur les licences sur le site officiel de Font Awesome.
+ */
+
+/* Je définis ici la configuration de base pour utiliser la police FontAwesome dans le projet. */
+@font-face {
+  font-family: 'FontAwesome'; /* Je nomme la police "FontAwesome". */
+  /* J'indique les différents formats et chemins pour assurer une compatibilité maximale. */
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+       url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+       url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+       url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+       url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal; /* J'utilise un poids normal pour la police. */
+  font-style: normal; /* Le style de la police est également normal. */
+}
+
+/* J'applique un style de base aux icônes FontAwesome pour qu'elles s'affichent correctement. */
+.fa {
+  display: inline-block; /* Les icônes sont traitées comme des éléments en ligne mais avec une largeur et une hauteur. */
+  font: normal normal normal 14px/1 FontAwesome; /* J'applique la police FontAwesome avec une taille de 14px. */
+  font-size: inherit; /* La taille de la police hérite de celle de l'élément parent. */
+  text-rendering: auto; /* Le rendu du texte est automatique pour optimiser la lisibilité. */
+  -webkit-font-smoothing: antialiased; /* J'active l'anti-aliasing sur WebKit pour des icônes plus nettes. */
+  -moz-osx-font-smoothing: grayscale; /* Sur Firefox/Mac, je passe en niveaux de gris pour adoucir les icônes. */
+}
+
+/* J'ajuste la taille des icônes selon des classes spécifiques pour plus de flexibilité. */
+.fa-lg { font-size: 1.33333333em; } /* "Large" */
+.fa-2x { font-size: 2em; } /* 2 fois plus grand */
+.fa-3x { font-size: 3em; } /* 3 fois plus grand */
+.fa-4x { font-size: 4em; } /* 4 fois plus grand */
+.fa-5x { font-size: 5em; } /* 5 fois plus grand */
+
+/* Je permets la rotation et le retournement des icônes pour plus de variété dans leur utilisation. */
+.fa-rotate-90 { transform: rotate(90deg); } /* Rotation de 90 degrés */
+.fa-rotate-180 { transform: rotate(180deg); } /* Rotation de 180 degrés */
+.fa-rotate-270 { transform: rotate(270deg); } /* Rotation de 270 degrés */
+.fa-flip-horizontal { transform: scale(-1, 1); } /* Retournement horizontal */
+.fa-flip-vertical { transform: scale(1, -1); } /* Retournement vertical */
+
+/* J'introduis une animation de rotation pour les icônes qui utilisent la classe .fa-spin. */
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear; /* Animation continue sur WebKit. */
+  animation: fa-spin 2s infinite linear; /* Animation standard continue. */
+}
+@-webkit-keyframes fa-spin { /* Définition de l'animation pour WebKit. */
+  0% { -webkit-transform: rotate(0deg); } /* Départ */
+  100% { -webkit-transform: rotate(359deg); } /* Arrivée */
+}
+@keyframes fa-spin { /* Définition de l'animation standard. */
+  0% { transform: rotate(0deg); } /* Départ */
+  100% { transform: rotate(359deg); } /* Arrivée */
+}
+
+/* J'ajoute des icônes spécifiques au projet avec leurs codes Unicode correspondants. */
+.fa-facebook-square:before { content: "\f082"; } /* Icône Facebook */
+.fa-twitter-square:before { content: "\f081"; } /* Icône Twitter */
+.fa-linkedin-square:before { content: "\f08c"; } /* Icône LinkedIn */
+
+/* Je m'assure que les éléments destinés à être cachés mais accessibles restent accessibles. */
+.sr-only {
+  position: absolute; /* Position absolue pour les retirer du flux normal. */
+  width: 1px; height: 1px; /* Taille minimale. */
+  margin: -1px; /* Hors de la vue sans prendre d'espace. */
+  overflow: hidden; /* Cache le contenu. */
+  clip: rect(0, 0, 0, 0); /* Clip le contenu. */
+  border: 0; /* Aucune bordure. */
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static; /* Reviennent dans le flux normal lorsqu'ils sont actifs ou focalisés. */
+  width: auto; height: auto; /* Taille automatique. */
+  margin: 0; /* Marge normale. */
+  overflow: visible; /* Le contenu redevient visible. */
+  clip: auto; /* Plus de clipping. */
+}

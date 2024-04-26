@@ -1,0 +1,226 @@
+/* J'intègre la police de caractères "Bodega Sans" pour apporter une touche unique à mon site. */
+@font-face {
+    font-family: "Bodega Sans";
+    src: url("../fonts/bodegasans-cufonfonts-webfont/Bodega\ Sans\ Black.woff");
+}
+
+/* Je définis une palette de couleurs pour assurer la cohérence visuelle de mon site. */
+:root {
+    --gris: #444444; /* Je choisis un gris moyen pour le fond. */
+    --gris-fonce: #333333; /* Un gris plus foncé pour certains éléments textuels. */
+    --orange: #ff9d00; /* L'orange est utilisé comme couleur d'accent pour attirer l'attention. */
+}
+
+/* Je stylise le corps de la page pour créer une ambiance cohérente avec le thème du site. */
+body {
+    background-color: var(--gris);
+    background-image: url("../img/bg-helmet.png"); /* J'ajoute une image de fond pour plus de caractère. */
+    text-align: center;
+    color: white; /* Je garde le texte en blanc pour une lecture facile sur fond sombre. */
+}
+
+/* Je m'assure que les titres et les liens dans la navigation utilisent la police "Bodega Sans". */
+h1, h2, h3, nav ul li a {
+    font-family: "Bodega Sans";
+}
+
+/* Je transforme tous les titres en majuscules pour une apparence plus dynamique et professionnelle. */
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+/* Je personnalise davantage les titres de niveau 2. */
+h2 {
+    margin-bottom: 20px; /* J'ajoute un peu d'espace sous les titres h2 pour aérer le contenu. */
+    text-align: left; /* Je les aligne à gauche pour une meilleure structure visuelle. */
+    margin-left: 35px; /* Et je les décale légèrement pour créer un effet visuel intéressant. */
+}
+
+/* Je crée une classe pour les éléments que je souhaite mettre en avant avec la couleur orange. */
+.text-orange {
+    color: var(--orange);
+}
+
+/* Je stylise l'en-tête pour qu'il soit visuellement attrayant et aligné avec l'identité de la marque. */
+header {
+    background-image: linear-gradient(135deg, rgba(255,255,255,1) 50%, rgba(51,51,51,1) 50%);
+}
+
+/* Je structure la navigation pour qu'elle soit fluide et intuitive. */
+nav {
+    width: 80%;
+    margin: auto; /* Je centre la navigation. */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: right;
+    flex-wrap: wrap; /* Les éléments de navigation passent à la ligne sur les petits écrans. */
+}
+
+/* Je supprime les puces des listes pour une apparence plus nette. */
+ul li {
+    list-style: none;
+}
+
+/* Je définis le style des listes dans la navigation pour améliorer l'expérience utilisateur. */
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px; /* J'ajoute de l'espace entre les éléments pour une meilleure lisibilité. */
+    margin: 30px; /* Et je mets une marge autour pour aérer. */
+}
+
+/* Je personnalise les liens de la navigation pour les rendre plus attractifs. */
+nav ul li a {
+    color: white; /* Les liens sont blancs pour contraster avec le fond sombre. */
+    font-size: 20px; /* Je les rends un peu plus grands pour faciliter la lecture. */
+    text-decoration: none; /* J'enlève le soulignement pour un look plus épuré. */
+}
+
+/* Je crée un effet de survol pour les liens afin d'améliorer l'interaction utilisateur. */
+nav ul li a:hover {
+    color: var(--orange); /* Les liens deviennent orange lorsqu'on passe la souris dessus. */
+}
+
+/* Je stylise la section de la galerie pour mettre en valeur les produits. */
+.top-bar {
+    border-top: 2px solid var(--orange); /* J'ajoute une barre supérieure orange pour attirer l'attention. */
+    padding-top: 20px; /* Je crée de l'espace au-dessus pour aérer la section. */
+}
+
+/* Je définis le style des boutons pour qu'ils soient cohérents avec l'esthétique globale du site. */
+.btn-article {
+    background-color: var(--orange); /* Je les rends orange pour qu'ils se démarquent. */
+    border-radius: 0; /* J'enlève les bords arrondis pour un look plus moderne. */
+    color: white; /* Le texte des boutons est blanc pour rester lisible. */
+    width: 100%; /* Les boutons prennent toute la largeur pour une meilleure accessibilité. */
+    text-decoration: none; /* J'enlève le soulignement pour garder un aspect net. */
+}
+
+/* Je stylise la section "À propos" pour fournir des informations sur l'entreprise de manière engageante. */
+.about p {
+    text-align: justify; /* J'aligne le texte pour une lecture plus confortable. */
+}
+
+/* Je m'assure que les liens dans la section des logos sont bien visibles. */
+.logos a {
+    color: white; /* Les liens restent blancs pour une cohérence visuelle. */
+    text-decoration: none; /* Pas de soulignement pour maintenir un aspect propre. */
+}
+
+/* Je positionne les logos de manière équilibrée pour une apparence harmonieuse. */
+.logos {
+    display: flex;
+    justify-content: space-around; /* Les logos sont répartis uniformément. */
+    width: 70%; /* Je définis une largeur spécifique pour contrôler leur affichage. */
+    margin-top: 50px; /* Je crée de l'espace au-dessus pour séparer cette section du reste. */
+}
+
+/* Je peaufine le style du pied de page pour terminer la page sur une note professionnelle. */
+.footer-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Je centre les éléments pour une meilleure présentation. */
+}
+
+/* Je structure la navigation dans le pied de page pour une meilleure accessibilité. */
+.footer-navigation ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px; /* Je mets de l'espace entre les éléments pour une navigation facile. */
+    padding: 0; /* Je supprime le padding par défaut pour un alignement précis. */
+}
+
+/* Je stylise les liens dans le pied de page pour qu'ils soient conformes à l'esthétique du site. */
+footer a {
+    color: white; /* Les liens sont blancs pour un contraste clair avec le fond. */
+    text-decoration: underline; /* Je souligne les liens pour indiquer qu'ils sont interactifs. */
+}
+
+/* Je m'assure que les images dans la section "Academy" sont de taille appropriée. */
+.footer-academy img {
+    width: 50px; /* Je définis une largeur fixe pour les logos. */
+    height: auto; /* La hauteur s'ajuste automatiquement pour préserver les proportions. */
+}
+
+/* Je règle la taille du texte dans la section "Academy" pour qu'il reste lisible mais discret. */
+.footer-academy p {
+    font-size: 0.8rem; /* Un peu plus petit que le texte standard pour une hiérarchie claire. */
+}
+
+/* Je crée de l'espace sous les paragraphes du pied de page pour une séparation visuelle. */
+.footer-navigation p {
+    margin-bottom: 30px;
+}
+
+/* Je m'assure que le site s'adapte aux petits écrans, pour une expérience utilisateur optimale sur mobile. */
+@media screen and (max-width: 576px) {
+
+    /* J'ajuste l'arrière-plan de l'en-tête pour les petits écrans. */
+    header {
+        background-image: linear-gradient(160deg, rgba(255,255,255,1) 50%, rgba(51,51,51,1) 50%);
+    }
+
+    /* Je réorganise la navigation pour qu'elle soit plus adaptée aux petits écrans. */
+    nav {
+        justify-content: right;
+        gap: 30px;
+        width: 80%;
+        margin: auto;
+    }
+
+    /* J'ajuste le positionnement de la liste de navigation pour les petits écrans. */
+    nav ul {
+        margin-right: 0;
+    }
+
+    /* Je m'assure que les éléments de navigation s'adaptent à l'espace disponible. */
+    .footer-navigation ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 170px;
+    }
+
+    /* J'ajuste le positionnement du logo pour qu'il soit centré sur les petits écrans. */
+    nav img {
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    /* J'ajuste l'alignement des titres h2 pour les petits écrans. */
+    h2 {
+        margin-right: 30px;
+    }
+}
+
+/* J'optimise l'affichage du site pour les écrans moyens, comme les tablettes. */
+@media screen and (min-width: 576px) and (max-width: 992px) {    
+    /* J'ajuste la taille et le positionnement du logo pour les écrans moyens. */
+    nav img {
+        height: auto;
+        margin-left: 30px;
+    }
+
+    /* J'étends la largeur de la navigation pour utiliser tout l'espace disponible. */
+    nav {
+        width: 100%;
+    }
+}
+
+/* J'apporte des ajustements supplémentaires pour les écrans jusqu'à 992px de large. */
+@media screen and (max-width: 992px) {
+    /* Je modifie l'agencement des logos pour qu'ils soient plus adaptés aux écrans plus étroits. */
+    .logos {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 40px;
+    }
+
+    /* J'ajuste l'alignement du texte dans la section "À propos" pour qu'il soit centré, améliorant ainsi la lisibilité sur les petits écrans. */
+    .about p {
+        text-align: center;
+    }
+}
